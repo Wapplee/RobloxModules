@@ -20,7 +20,10 @@ local UseFirebase = true;
 function FirebaseService:SetUseFirebase(value)
 	UseFirebase = value and true or false;
 end
-
+function FirebaseService:Configure(database,auth)
+	defaultDatabase = database; -- Set your database link
+	authenticationToken = auth;
+end
 --[[**
 	Sets whether Firebase's data can be updated from server. Data can still be read from realtime Database regardless.
 	@param name string Given name of a JSON Object in the Realtime Database.
