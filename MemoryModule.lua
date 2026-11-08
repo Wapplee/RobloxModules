@@ -1,3 +1,5 @@
+-- local MemoryModule = loadstring(game:HttpGet('https://github.com/Wapplee/RobloxModules/blob/main/MemoryModule.lua?t='..tick()))()
+
 local module = {}
 local recheckList = {}
 
