@@ -1,5 +1,5 @@
 -- loadstring(game:HttpGet("https://raw.githubusercontent.com/Wapplee/RobloxModules/refs/heads/main/WSerializerV2.lua?t="..tick()))()
-local http = game:GetService("HttpService")
+local htt = game:GetService("HttpService")
 local hasHttpGet = pcall(function() return game.HttpGet end)
 
 local Classes = (function()
