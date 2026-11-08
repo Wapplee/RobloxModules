@@ -1022,9 +1022,9 @@ function module:Serialize(...) : string
 	return buffer.tostring(encoded)
 end
 function module:Deserialize(source,parent) : ...any
-	local bfr = game:GetService("EncodingService"):Base64Decode(source)
+	local bfr = game:GetService("EncodingService"):Base64Decode(buffer.fromstring(source))
 	return module:_deserialize(
-		module:_decompress(buffer.tostring(bfr),parent)
+		module:_decompress(bfr,parent)
 	)
 end
 
