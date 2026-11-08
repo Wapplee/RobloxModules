@@ -1029,16 +1029,12 @@ function module:Deserialize(source,parent) : ...any
 end
 
 function module:UploadOnline(title,name,content)
-	local encoded = game:GetService("EncodingService"):Base64Encode(
-		buffer.fromstring(content)
-	)
-	local tab = http:JSONDecode(http:PostAsync("https://glot.io/api/snippets",http:JSONEncode{language="plaintext",title=title,public=true,files={{name = name,content=encoded}}}))
+	local tab = http:JSONDecode(http:PostAsync("https://glot.io/api/snippets",http:JSONEncode{language="plaintext",title=title,public=true,files={{name = name,content=content}}}))
 	return tab
 end
 function module:DownloadOnline(snippetUrl)
 	local data = if hasHttpGet then game:HttpGet(snippetUrl) else http:GetAsync(snippetUrl)
-	local bfr = game:GetService("EncodingService"):Base64Decode(data)
-	return buffer.tostring(bfr)
+	return data
 end
 
 return module
