@@ -1013,13 +1013,18 @@ function module:_deserialize(source, parent) : ...any
 end
 
 function module:Serialize(...) : string
-	return module:_compress(
+	local str = module:_compress(
 		module:_serialize(...)
 	)
+	local encoded = game:GetService("EncodingService"):Base64Encode(
+		buffer.fromstring(str)
+	)
+	return encoded
 end
 function module:Deserialize(source,parent) : ...any
+	local bfr = game:GetService("EncodingService"):Base64Decode(source)
 	return module:_deserialize(
-		module:_decompress(source,parent)
+		module:_decompress(buffer.tostring(bfr),parent)
 	)
 end
 
