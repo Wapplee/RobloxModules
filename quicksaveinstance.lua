@@ -1,4 +1,4 @@
--- local quicksaveinstance = loadstring(game:HttpGet('https://glot.io/snippets/hhhuunsw0j/raw/quicksaveinstance.lua'))()
+-- local quicksaveinstance = loadstring(game:HttpGet('https://raw.githubusercontent.com/Wapplee/RobloxModules/refs/heads/main/quicksaveinstance.lua?t='..tick()))()
 -- https://luau.github.io/UniversalSynSaveInstance/api/SynSaveInstance
 local Params = {
 	RepoURL = "https://raw.githubusercontent.com/luau/UniversalSynSaveInstance/main/",
