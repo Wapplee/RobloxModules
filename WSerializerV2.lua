@@ -1038,5 +1038,3 @@ function module:DownloadOnline(snippetUrl)
 end
 
 return module
-
-return module
