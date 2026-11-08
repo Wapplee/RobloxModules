@@ -1,4 +1,4 @@
--- local UIModule = loadstring(game:HttpGet('https://github.com/Wapplee/RobloxModules/blob/main/UI.lua?t='..tick()))()
+-- local UIModule = loadstring(game:HttpGet('https://raw.githubusercontent.com/Wapplee/RobloxModules/refs/heads/main/UI.lua?t='..tick()))()
 local http = game:GetService("HttpService")
 local uis = game:GetService("UserInputService")
 local ts = game:GetService("TweenService")
