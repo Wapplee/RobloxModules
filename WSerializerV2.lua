@@ -1,4 +1,4 @@
--- loadstring(game:HttpGet("https://glot.io/snippets/gnvhn0tvn3/raw/v2.lua"))()
+-- loadstring(game:HttpGet("https://raw.githubusercontent.com/Wapplee/RobloxModules/refs/heads/main/WSerializerV2.lua?t="..tick())()
 local http = game:GetService("HttpService")
 local hasHttpGet = pcall(function() return game.HttpGet end)
 
