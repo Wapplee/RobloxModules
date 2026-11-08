@@ -1019,7 +1019,7 @@ function module:Serialize(...) : string
 	local encoded = game:GetService("EncodingService"):Base64Encode(
 		buffer.fromstring(str)
 	)
-	return encoded
+	return buffer.tostring(encoded)
 end
 function module:Deserialize(source,parent) : ...any
 	local bfr = game:GetService("EncodingService"):Base64Decode(source)
@@ -1036,5 +1036,7 @@ function module:DownloadOnline(snippetUrl)
 	local data = if hasHttpGet then game:HttpGet(snippetUrl) else http:GetAsync(snippetUrl)
 	return data
 end
+
+return module
 
 return module
